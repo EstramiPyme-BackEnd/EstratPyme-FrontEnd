@@ -1,5 +1,5 @@
 ## Descripcion:
-El proyecto desarrolla una plataforma web para que individuos y empresas realicen pruebas diagnósticas basadas en el libro "EstraMyPyme" de la universidad EAFIT, incluyendo registro de usuarios, inicio de sesion usando credenciales, pruebas diagnosticas, formularios para clasificar y obtener informacion de la empresa ademas cuenta con un panel de administración para visualizar resultados y gráficas, facilitando el proceso tanto para los clientes(empresas) como para los administradores e internos de la universidad.
+El proyecto desarrolla una plataforma web para que individuos y empresas realicen pruebas diagnósticas basadas en el libro "Estramipyme" de la universidad EAFIT, incluyendo registro de usuarios, inicio de sesion usando credenciales, pruebas diagnosticas, formularios para clasificar y obtener informacion de la empresa ademas cuenta con un panel de administración para visualizar resultados y gráficas, facilitando el proceso tanto para los clientes(empresas) como para los administradores e internos de la universidad.
 #### El sistema permite:
 - Registrar empresas y almacenar la informacion suministrada por estas.
 - Iniciar sesion con credenciales tanto como empresa y como administrador.

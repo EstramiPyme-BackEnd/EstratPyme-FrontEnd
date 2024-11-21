@@ -39,7 +39,7 @@ export class AddStudentButtonComponent {
 
     const searchCriteria = id ? `id=${id}` : `email=${email}`;
 
-    this.http.get(`https://estramipyme-api.vercel.app/students?${searchCriteria}`).subscribe({
+    this.http.get(`http://localhost:8080/student?${searchCriteria}`).subscribe({
       next: (students: any) => {
         if (students.length === 0) {
           this.showErrorModal = true;
@@ -65,7 +65,7 @@ export class AddStudentButtonComponent {
 
   addStudentToProject() {
     if (this.studentId !== null) {
-      this.http.patch(`https://estramipyme-api.vercel.app/students/${this.studentId}`, { haceParteProyecto: true }).subscribe({
+      this.http.patch(`http://localhost:8080/student/${this.studentId}`, { haceParteProyecto: true }).subscribe({
         next: () => {
           this.showSuccessModal = true;
           this.studentFound = false;
