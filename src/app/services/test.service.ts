@@ -26,7 +26,7 @@ export class TestService {
   }
 
   updateisTestDone(user:any){
-    const url = `http://localhost:8080/usuario/${user.id}`;
+    const url = `https://estramipyme-api.vercel.app/usuarios/${user.id}`;
 
     return this.http.patch(url, { isTestDone: true });
 

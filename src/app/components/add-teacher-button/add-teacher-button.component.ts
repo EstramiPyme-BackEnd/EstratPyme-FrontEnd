@@ -65,7 +65,7 @@ export class AddTeacherButtonComponent {
 
   addTeacherToProject() {
     if (this.teacherId !== null) {
-      this.http.patch(`http://localhost:8080/teacher/${this.teacherId}`, { profesorParteProyecto: true }).subscribe({
+      this.http.put(`http://localhost:8080/teacher/${this.teacherId}`, { profesorParteProyecto: true }).subscribe({
         next: () => {
           this.showSuccessModal = true;
           this.teacherFound = false;

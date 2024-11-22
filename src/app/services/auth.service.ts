@@ -3,13 +3,14 @@ import { Injectable } from '@angular/core';
 import { User } from '../models/user';
 import { catchError, map, Observable, of } from 'rxjs';
 import { Admin } from '../models/admin';
+import { Console } from 'node:console';
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-  private baseUrl = 'http://localhost:8080/usuario';
+  private baseUrl = 'http://localhost:8080/usuarios';
   private baseUrlAdmin= "http://localhost:8080/admin"
 
   isLoggedIn:boolean=false;
@@ -27,6 +28,7 @@ export class AuthService {
           const user = usuarios[0];
           // Compara la contraseña ingresada con la almacenada en la base de datos
           if (password === user.password) {
+            console.log("passwords", password, "User password:", user.password)
             return user;
           } else {
             return null;
