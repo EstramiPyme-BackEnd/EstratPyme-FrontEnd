@@ -23,7 +23,7 @@
             <input type="text" id="sector" value={{user_sector}} disabled>
 
             <label for="registerDate" class="title">Fecha de Registro:</label>
-            <input type="month" id="registerDate" value={{user?.registerDate}} disabled>
+            <input type="date" id="registerDate" [value]="user?.registerDate" disabled>
         </div>
         </form>
     </div>
