@@ -10,8 +10,8 @@ import { Console } from 'node:console';
   providedIn: 'root'
 })
 export class AuthService {
-  private baseUrl = 'http://localhost:8080/usuarios';
-  private baseUrlAdmin= "http://localhost:8080/admin"
+  private baseUrl = 'http://localhost:8080/usuarios/';
+  private baseUrlAdmin= "http://localhost:8080/admin/"
 
   isLoggedIn:boolean=false;
 
@@ -25,7 +25,7 @@ export class AuthService {
     return this.http.get<User[]>(`${this.baseUrl}?email=${email}`).pipe(
       map(usuarios => {
         if (usuarios.length > 0) {
-          const user = usuarios[0];
+          const user = usuarios[0];         
           // Compara la contraseña ingresada con la almacenada en la base de datos
           if (password === user.password) {
             console.log("passwords", password, "User password:", user.password)
